@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(255, 255, 255);
 }
 
 #text {
@@ -30,18 +31,14 @@ body {
   display: inline;
 }
 
-.bigMain {
-  display: flex;
-  justify-content: center;
-}
-
 .main {
   width: 70vw;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .main div:hover {
@@ -58,6 +55,17 @@ body {
   list-style: none;
 }
 
-.books li {
+.books li,
+p,
+h3 {
   text-align: center;
+}
+
+.books li {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.books p {
+  font-style: italic;
 }

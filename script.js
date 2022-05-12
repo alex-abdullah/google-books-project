@@ -1,14 +1,9 @@
-// Test
-console.log("Hi");
-
 // Creating Main
 const main = document.createElement("main");
-
-//Appending Main to Body
-document.body.appendChild(main);
-
 //Adding Class to Main
 main.classList.add("main");
+//Appending Main to Body
+document.body.appendChild(main);
 
 // Saving search term to variable
 const url = "https://www.googleapis.com/books/v1/volumes?q=";
@@ -17,8 +12,61 @@ const getSearchUrl = (searchTerm) => {
     return url + searchTerm;
 };
 
+// Function
+const renderBooks = (volume) => {
+    // Empty Object to store book titles
+    const output = {};
+
+    // Inserting book key-value pairs into object
+    output.title = volume.volumeInfo.title;
+    output.authors = volume.volumeInfo.authors;
+    output.description = volume.volumeInfo.description;
+    output.image = volume.volumeInfo.imageLinks.thumbnail;
+
+    // Creating Book Container
+    const div = document.createElement("div");
+    div.classList.add("books");
+    document.body.appendChild(div);
+
+    // Creating new img element
+    const image = document.createElement("img");
+    image.src = `${output.image}`;
+
+    // Appending image to img element
+    div.append(document.body.appendChild(image));
+
+    // Create new li elements
+    const createItem = (key, element) => {
+        const listItem = document.createElement(element);
+        listItem.appendChild(document.createTextNode(key));
+        div.append(document.body.appendChild(listItem));
+    };
+
+    // Shortening descriptions
+    if (output.description.length > 20) {
+        output.description = `${output.description.slice(0, 50)}...`;
+    }
+
+    // Reducing displayed authors
+    if (output.authors.length > 1) {
+        output.authors = output.authors[0];
+    }
+
+    // Calling function
+    createItem(output.title, "h3");
+    createItem(output.authors, "li");
+    createItem(output.description, "p");
+
+    //Appending divs to Main
+    main.append(div);
+
+    // Returning newly filled object
+    return output;
+};
+
 // Creating Search Function
 const search = async (searchTerm) => {
+    let results = "";
     // Saving API call
     const requestPromise = fetch(getSearchUrl(searchTerm));
 
@@ -27,53 +75,9 @@ const search = async (searchTerm) => {
 
     // Saving JSON Object
     const responseData = await response.json();
-    console.log(responseData);
 
     // Mapping over search results to get titles
-    const results = responseData.items.map((volume) => {
-        // Empty Object to store book titles
-        const output = {};
-
-        // Inserting book key-value pairs into object
-        output.title = volume.volumeInfo.title;
-        output.authors = volume.volumeInfo.authors;
-        output.description = volume.volumeInfo.description;
-        output.publishedDate = volume.volumeInfo.publishedDate;
-        output.image = volume.volumeInfo.imageLinks.thumbnail;
-
-        // Creating Book Container
-
-        const container = document.createElement("div");
-        container.classList.add("books");
-        document.body.appendChild(container);
-
-        // Creating new img element
-        const image = document.createElement("img");
-
-        // Appending image to img element
-        image.src = `${output.image}`;
-
-        // Create new li elements
-        const listItem1 = document.createElement("li");
-        listItem1.appendChild(document.createTextNode(output.authors));
-        const listItem2 = document.createElement("li");
-        listItem2.appendChild(document.createTextNode(output.title));
-        const listItem3 = document.createElement("li");
-        listItem3.appendChild(document.createTextNode(output.description));
-
-        // Appending li elements to container
-        container.append(document.body.appendChild(image));
-        container.append(document.body.appendChild(listItem1));
-        container.append(document.body.appendChild(listItem2));
-        // container.append(document.body.appendChild(listItem3));
-
-        //Appending containers to Main
-        main.append(container);
-
-        // Returning newly filled object
-
-        return output;
-    });
+    results = responseData.items.map(renderBooks);
 
     console.table(results);
 };
