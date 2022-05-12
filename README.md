@@ -1,16 +1,4 @@
-# google-books-project
-
-## Main Objective
-
-Our goal is to create a site that allows users to search for book titles. Options
-
-### STEP ONE
-
--   replicate fetch on ONE BOOK -> Harry Potter
-
-### Textbook
-
-<!-- # Google Books UI
+# Google Books
 
 ### MVP:
 

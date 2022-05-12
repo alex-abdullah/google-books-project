@@ -1,7 +1,9 @@
+@use "colours" as *;
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(251, 248, 243);
+    background-color: $colour-primary;
 }
