@@ -6,11 +6,7 @@ main.classList.add("main");
 document.body.appendChild(main);
 
 // Saving search term to variable
-const url = "https://www.googleapis.com/books/v1/volumes?q=";
-
-const getSearchUrl = (searchTerm) => {
-    return url + searchTerm;
-};
+import { url, getSearchUrl } from "./non-dom.js";
 
 // Function
 const renderBooks = (volume) => {
