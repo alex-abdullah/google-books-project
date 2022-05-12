@@ -1,0 +1,63 @@
+.heading h1 {
+  font-size: 60px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#text {
+  width: 500px;
+  height: 30px;
+  font-size: 20px;
+}
+
+#submit {
+  height: 35px;
+  width: 90px;
+  font-size: 20px;
+}
+
+.heading {
+  display: block;
+  text-align: center;
+}
+
+.query {
+  display: inline;
+}
+
+.bigMain {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 70vw;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.main div:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.books {
+  width: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style: none;
+}
+
+.books li {
+  text-align: center;
+}
