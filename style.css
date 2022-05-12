@@ -1,5 +1,21 @@
-.heading h1 {
+.heading {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+.heading--main {
   font-size: 60px;
+  font-family: "Roboto", sans-serif;
+}
+.heading--text {
+  width: 500px;
+  height: 30px;
+  font-size: 20px;
+}
+.heading--search {
+  height: 35px;
+  width: 90px;
+  font-size: 20px;
 }
 
 body {
@@ -7,28 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-}
-
-#text {
-  width: 500px;
-  height: 30px;
-  font-size: 20px;
-}
-
-#submit {
-  height: 35px;
-  width: 90px;
-  font-size: 20px;
-}
-
-.heading {
-  display: block;
-  text-align: center;
-}
-
-.query {
-  display: inline;
+  background-color: rgb(251, 248, 243);
 }
 
 .main {
@@ -53,11 +48,6 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   list-style: none;
-}
-
-.books li,
-p,
-h3 {
   text-align: center;
 }
 

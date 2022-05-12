@@ -1,0 +1,24 @@
+@use "font-styling" as *;
+
+.heading {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+
+    &--main {
+        font-size: $font-heading-size;
+        font-family: $font-heading-style;
+    }
+
+    &--text {
+        width: 500px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    &--search {
+        height: 35px;
+        width: 90px;
+        font-size: 20px;
+    }
+}

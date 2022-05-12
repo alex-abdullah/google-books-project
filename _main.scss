@@ -1,0 +1,17 @@
+@use "font-styling" as *;
+
+.main {
+    width: 70vw;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    font-family: $font-body-style;
+}
+
+.main div:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}

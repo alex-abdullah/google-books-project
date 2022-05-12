@@ -6,20 +6,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Google Books</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
         <script defer src="script.js" type="module"></script>
     </head>
     <body>
         <div class="heading">
-            <h1>Google Books</h1>
+            <h1 class="heading--main">Google Books</h1>
             <div class="query">
                 <form>
                     <input
+                        class="heading--text"
                         id="text"
                         type="text"
                         name="search"
                         placeholder="Type here"
                     />
-                    <button type="submit" id="submit">Search</button>
+                    <button class="heading--search" type="submit" id="submit">
+                        Search
+                    </button>
                 </form>
             </div>
         </div>
