@@ -44,7 +44,7 @@ body {
 }
 
 .books {
-  width: 200px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   list-style: none;
