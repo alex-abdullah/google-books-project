@@ -6,6 +6,7 @@
     text-align: center;
 
     &--main {
+        justify-content: center;
         font-size: $font-heading-size;
         font-family: $font-heading-style;
     }

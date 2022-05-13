@@ -4,6 +4,7 @@ import search from "./non-dom.js";
 // selecting innertext of textbook
 const searchButton = document.getElementById("submit");
 
+// Function to clear previous search items
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
@@ -18,9 +19,8 @@ searchButton.addEventListener("click", (e) => {
     // Storing contents of textbox
     let textbox = document.getElementById("text").value;
 
-    if (document.querySelector("main").children.length > 0) {
-        removeAllChildNodes(document.querySelector("main"));
-    }
+    // Calling clear function
+    removeAllChildNodes(document.querySelector("main"));
 
     // Calling Search function
     search(textbox);

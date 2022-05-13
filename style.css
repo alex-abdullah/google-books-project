@@ -4,6 +4,7 @@
   text-align: center;
 }
 .heading--main {
+  justify-content: center;
   font-size: 80px;
   font-family: "Roboto", sans-serif;
 }
@@ -43,9 +44,8 @@ body {
 }
 
 .books {
-  width: 10vw;
+  width: 200px;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   list-style: none;
   text-align: center;

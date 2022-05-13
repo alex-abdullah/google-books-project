@@ -12,9 +12,9 @@ const renderBooks = (volume) => {
 
     // Inserting book key-value pairs into object
     output.title = volume.volumeInfo?.title ?? "Title not found.";
-    output.authors = volume.volumeInfo?.authors ?? "No author found.";
+    output.authors = volume.volumeInfo?.authors ?? "Author not found.";
     output.description =
-        volume.volumeInfo?.description ?? "Description not provided.";
+        volume.volumeInfo?.description ?? "Description not found.";
     output.image = volume.volumeInfo.imageLinks.thumbnail;
 
     // Creating Book Container
@@ -29,7 +29,7 @@ const renderBooks = (volume) => {
     // Appending image to img element
     div.append(document.body.appendChild(image));
 
-    // Create new li elements
+    // Function to create new elements
     const createItem = (key, element) => {
         const listItem = document.createElement(element);
         listItem.appendChild(document.createTextNode(key));
@@ -46,7 +46,7 @@ const renderBooks = (volume) => {
         output.authors = output.authors[0];
     }
 
-    // Calling function
+    // Calling create element function
     createItem(output.title, "h3");
     createItem(output.authors, "li");
     createItem(output.description, "p");
