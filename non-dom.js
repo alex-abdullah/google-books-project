@@ -1,8 +1,8 @@
 import renderBooks from "./dom.js";
 
-export const url = "https://www.googleapis.com/books/v1/volumes?q=";
+const url = "https://www.googleapis.com/books/v1/volumes?q=";
 
-export const getSearchUrl = (searchTerm) => {
+const getSearchUrl = (searchTerm) => {
     return url + searchTerm;
 };
 

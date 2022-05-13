@@ -4,7 +4,7 @@
   text-align: center;
 }
 .heading--main {
-  font-size: 60px;
+  font-size: 80px;
   font-family: "Roboto", sans-serif;
 }
 .heading--text {
@@ -30,7 +30,7 @@ body {
   width: 70vw;
   margin-top: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 3rem;
   flex-wrap: wrap;
   font-family: Arial, Helvetica, sans-serif;

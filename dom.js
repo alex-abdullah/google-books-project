@@ -1,5 +1,5 @@
 // Creating Main
-export const main = document.createElement("main");
+const main = document.createElement("main");
 //Adding Class to Main
 main.classList.add("main");
 //Appending Main to Body
