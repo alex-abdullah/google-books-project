@@ -28,4 +28,3 @@ searchButton.addEventListener("click", (e) => {
 
 // TASKS
 // Responsiveness
-// Clear all on search

@@ -11,9 +11,10 @@ const renderBooks = (volume) => {
     const output = {};
 
     // Inserting book key-value pairs into object
-    output.title = volume.volumeInfo.title;
-    output.authors = volume.volumeInfo.authors;
-    output.description = volume.volumeInfo.description;
+    output.title = volume.volumeInfo?.title ?? "Title not found.";
+    output.authors = volume.volumeInfo?.authors ?? "No author found.";
+    output.description =
+        volume.volumeInfo?.description ?? "Description not provided.";
     output.image = volume.volumeInfo.imageLinks.thumbnail;
 
     // Creating Book Container

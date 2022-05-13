@@ -16,6 +16,7 @@ const search = async (searchTerm) => {
 
     // Saving JSON Object
     const responseData = await response.json();
+    console.log(responseData);
 
     // Mapping over search results to get titles
     results = responseData.items.map(renderBooks);
